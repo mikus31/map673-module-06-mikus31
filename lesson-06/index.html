@@ -26,7 +26,7 @@
             center: [40, -104]
             , zoom: 4
         });
-        var cartoCSS = "#layer {" + "polygon-fill: steelblue;" + "line-width: 1;" + "line-color: #FFF;" + "line-opacity: 0.5;" + "}";
+        var cartoCSS = "#layer {" + "polygon-fill: ramp([uninsured], (#ffffb2, #fed976, #feb24c, #fd8d3c, #fc4e2a, #e31a1c, #b10026), jenks);" + "line-width: 1;" + "line-color: #FFF;" + "line-opacity: 0.5;" + "}";
         var sourceObject = {
             user_name: 'mikus31', // string of your CARTO user name
             type: 'cartodb'
