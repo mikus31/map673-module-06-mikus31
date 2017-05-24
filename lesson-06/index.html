@@ -22,6 +22,21 @@
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script>
         // your JS here
+        var map = L.map('map', {
+            center: // map center
+                zoom: // initial zoom level
+        });
+        var sourceObject = {
+            user_name: 'mikus31' // string of your CARTO user name,
+            type: 'cartodb'
+            , sublayers: [
+                {
+                    sql: "< sql statement selecting from CARTO table >"
+                    , cartocss: // string of CartoCSS rules for styling the layer
+        }
+    ]
+        }
+        cartodb.createLayer(map, sourceObject).addTo(map);
     </script>
 </body>
 
