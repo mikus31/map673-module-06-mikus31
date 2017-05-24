@@ -23,16 +23,17 @@
     <script>
         // your JS here
         var map = L.map('map', {
-            center: // map center
-                zoom: // initial zoom level
+            center: [40, -104]
+            , zoom: 4
         });
+        var cartoCSS = "#layer {" + "polygon-fill: steelblue;" + "line-width: 1;" + "line-color: #FFF;" + "line-opacity: 0.5;" + "}";
         var sourceObject = {
-            user_name: 'mikus31' // string of your CARTO user name,
+            user_name: 'mikus31', // string of your CARTO user name
             type: 'cartodb'
             , sublayers: [
                 {
                     sql: "SELECT * FROM uninsured_adults_county"
-                    , cartocss: // string of CartoCSS rules for styling the layer
+                    , cartocss: cartoCSS // string of CartoCSS rules for styling the layer
         }
     ]
         }
