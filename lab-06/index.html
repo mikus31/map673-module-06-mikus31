@@ -14,13 +14,19 @@
             padding: 0;
             margin: 0;
         }
+        
+        ,
+        #title {}
     </style>
 </head>
 
 <body>
+    <div id="title"></div>
     <div id="map"></div>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-    <script type="cartocss/html" id="counties-styles"> #layer { polygon-fill: ramp([bdpercent], (#d2fbd4, #8eccb9, #559c9e, #2b6c7f, #123f5a), quantiles); line-width: 1; line-color: #FFF; line-opacity: 0.5; }</script>
+    <script type="cartocss/html" id="counties-styles"> #layer ['mapnik::geometry_type'=2] { line-color: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer ['mapnik::geometry_type'=3] { polygon-fill: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer { line-width: 1; line-opacity: 0.5; }</script>
+    <script type="cartocss/html" id="land-styles"> #na_land_clipped['mapnik::geometry_type'=1] { marker-width: 7; marker-fill: #FFB927; marker-fill-opacity: 0.9; marker-line-color: #FFF; marker-line-width: 1; marker-line-opacity: 1; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; } #na_land_clipped['mapnik::geometry_type'=2] { line-color: #3EBCAE; line-width: 1.5; line-opacity: 1; } #na_land_clipped['mapnik::geometry_type'=3] { polygon-fill: #374C70; polygon-opacity: 0.9; polygon-gamma: 0.5; line-color: #FFF; line-width: 1; line-opacity: 0.5; line-comp-op: soft-light; } </script>
+    <script type="cartocss/html" id="grat-styles"> #na_grat_clipped{ line-color: #3EBCAE; line-width: 1.5; line-opacity: 1; } </script>
     <script>
         // your JS here
         var map = L.map('map', {
@@ -33,6 +39,13 @@
             , type: 'cartodb'
             , sublayers: [
                 {
+                    sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id FROM na_grat_clipped"
+                    , cartocss: $("#grat-styles").text()
+          }, {
+                    sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id FROM na_land_clipped"
+                    , cartocss: $("#land-styles").text()
+          }
+                , {
                     sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id, bdpercent FROM uscounty_education" // reprojects and displays on map
                         
                     , cartocss: $("#counties-styles").text() // style for counties that lives above this block of script
