@@ -22,6 +22,8 @@
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <!--    cartocss rules go here-->
     <script type="cartocss/html" id="counties-styles"> #layer { polygon-fill: ramp([uninsured], (#ffffb2, #fecc5c, #fd8d3c, #f03b20, #bd0026), jenks); line-width: 1; line-color: #FFF; line-opacity: 0.5; } </script>
+    <script type="cartocss/html" id="land-styles"> #na_land_clipped['mapnik::geometry_type'=1] { marker-width: 7; marker-fill: #FFB927; marker-fill-opacity: 0.9; marker-line-color: #FFF; marker-line-width: 1; marker-line-opacity: 1; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; } #na_land_clipped['mapnik::geometry_type'=2] { line-color: #3EBCAE; line-width: 1.5; line-opacity: 1; } #na_land_clipped['mapnik::geometry_type'=3] { polygon-fill: #374C70; polygon-opacity: 0.9; polygon-gamma: 0.5; line-color: #FFF; line-width: 1; line-opacity: 0.5; line-comp-op: soft-light; } </script>
+    <script type="cartocss/html" id="grat-styles"> #na_grat_clipped{ line-width: 1.5; line-color: #c4cccb; line-opacity: 0.16; } </script>
     <script>
         // your JS here
         var map = L.map('map', {
