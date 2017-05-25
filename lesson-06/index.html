@@ -36,10 +36,15 @@
             type: 'cartodb'
             , sublayers: [
                 {
+                    sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id FROM na_grat_clipped"
+                    , cartocss: $("#grat-styles").text()
+          }, {
+                    sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id FROM na_land_clipped"
+                    , cartocss: $("#land-styles").text()
+          }, {
                     sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id, uninsured FROM uninsured_adults_county"
                     , cartocss: $("#counties-styles").text() // string of CartoCSS rules for styling the layer
-        }
-    ]
+            }]
         }
         cartodb.createLayer(map, sourceObject).addTo(map);
     </script>
