@@ -5,9 +5,7 @@
     <title>673 Module 07 Carto Starter Template</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-
     <style>
         html,
         body,
@@ -20,12 +18,27 @@
 </head>
 
 <body>
-
     <div id="map"></div>
-
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script>
         // your JS here
+        var map = L.map('map', {
+            center: [-6, 4], // map center
+            zoom: 5.3 // initial zoom level
+        });
+        var cartoCSS = "#layer {" + "polygon-fill: ramp([bdpercent], (#d2fbd4, #8eccb9, #559c9e, #2b6c7f, #123f5a), quantiles);" + "line-width: 1;" + "line-color: #FFF;" + "line-opacity: 0.5;" + "}";
+        var sourceObject = {
+            // string of your CARTO user name
+            user_name: 'mikus31'
+            , type: 'cartodb'
+            , sublayers: [
+                {
+                    sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id, bdpercent FROM uscounty_education"
+                    , cartocss: cartoCSS // string of CartoCSS rules for styling the layer
+        }
+    ]
+        }
+        cartodb.createLayer(map, sourceObject).addTo(map);
     </script>
 </body>
 
