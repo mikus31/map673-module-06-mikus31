@@ -67,6 +67,24 @@
             <p>Data Source: <a href="https://www.data.gov/">Data.gov</a>
                 <br>Map created by <a href="https://mikus31.github.io/">Michael McNeil</a></p>
         </div>
+        <div class='cartodb-legend choropleth'>
+            <div class="legend-title">Population</div>
+            <ul>
+                <li class="min"> 1256 </li>
+                <li class="max"> 8300 </li>
+                <li class="graph count_441">
+                    <div class="colors">
+                        <div class="quartile" style="background-color:#FFFFB2"></div>
+                        <div class="quartile" style="background-color:#FED976"></div>
+                        <div class="quartile" style="background-color:#FEB24C"></div>
+                        <div class="quartile" style="background-color:#FD8D3C"></div>
+                        <div class="quartile" style="background-color:#FC4E2A"></div>
+                        <div class="quartile" style="background-color:#E31A1C"></div>
+                        <div class="quartile" style="background-color:#B10026"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script type="cartocss/html" id="counties-styles"> #layer ['mapnik::geometry_type'=2] { line-color: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer ['mapnik::geometry_type'=3] { polygon-fill: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer { line-width: 1; line-opacity: 0.5; }</script>
