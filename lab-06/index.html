@@ -93,7 +93,33 @@
             </ul>
         </div>
         <!--        add div code for info window-->
-        <!--        copied the code from builder originally but could not get it to work below-->
+        <!--<div class="CDB-infowindow CDB-infowindow--light js-infowindow">
+  <div class="CDB-infowindow-close js-close"></div>
+  <div class="CDB-infowindow-container">
+    <div class="CDB-infowindow-bg">
+      <div class="CDB-infowindow-inner">
+        <ul class="CDB-infowindow-list js-content">
+          <li class="CDB-infowindow-listItem">
+              <h5 class="CDB-infowindow-subtitle">Place</h5>
+            <h4 class="CDB-infowindow-title">{{areaname}}</h4>
+          </li>
+          <li class="CDB-infowindow-listItem">
+              <h5 class="CDB-infowindow-subtitle">State</h5>
+            <h4 class="CDB-infowindow-title">{{state}}</h4>
+          </li>
+          <li class="CDB-infowindow-listItem">
+              <h5 class="CDB-infowindow-subtitle">% Bachelor&#39;s Degree or Better</h5>
+            <h4 class="CDB-infowindow-title">{{bdpercent}}</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="CDB-hook">
+      <div class="CDB-hook-inner"></div>
+    </div>
+  </div>
+</div>-->
+        <!--        copied the code from builder (above) but could not get it to work below-->
     </div>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script type="cartocss/html" id="counties-styles"> #layer ['mapnik::geometry_type'=2] { line-color: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer ['mapnik::geometry_type'=3] { polygon-fill: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer { line-width: 1; line-opacity: 0.5; }</script>
