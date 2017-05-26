@@ -23,13 +23,18 @@
             background-color: whitesmoke;
             z-index: 650;
             padding: 5px 10px;
-            border-radius: 50px;
+            border-radius: 10px;
             margin: 0;
         }
         
         h1 {
             font-family: 'Slabo 27px', serif;
             font-size: 35px;
+        }
+        
+        h2 {
+            font-family: 'Slabo 27px', serif;
+            font-size: 20px;
         }
         
         #textbox {
@@ -40,8 +45,14 @@
             background-color: whitesmoke;
             z-index: 650;
             padding: 5px 10px;
-            border-radius: 50px;
+            border-radius: 10px;
             margin: 0;
+        }
+        
+        p {
+            font-family: 'Slabo 27px', serif;
+            font-size: 15px;
+            width: 300px;
         }
     </style>
 </head>
@@ -50,7 +61,12 @@
     <div id="map">
         <div id="title">
             <h1>THE UNDEREDUCATED STATES OF AMERICA</h1></div>
-        <div id="textbox"></div>
+        <div id="textbox">
+            <h2>About This Map</h2>
+            <p>As of 2015, less than a third of American adults possess a Bachelor's Degree or better from colleges and universities. The map shows the percentage of American adults with a degree per United States county or parish.</p>
+            <p>Data Source: <a href="https://www.data.gov/">Data.gov</a>
+                <br>Map created by <a href="https://mikus31.github.io/">Michael McNeil</a></p>
+        </div>
     </div>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script type="cartocss/html" id="counties-styles"> #layer ['mapnik::geometry_type'=2] { line-color: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer ['mapnik::geometry_type'=3] { polygon-fill: ramp([bdpercent], cartocolor(Geyser, 10), quantiles); } #layer { line-width: 1; line-opacity: 0.5; }</script>
