@@ -12,9 +12,11 @@ It also provides a visual affordance for fans of ultimate to see where their fav
 
 In addition to pre-tournament planning, the map could be configured to show round-by-round results by way of final scores. This would bring fans, tournament organizers, and media back to the interactive map before, during, and after a tournament to use the map for results, analysis, recap, research, etc.
 
-For example, the blog Bama Secs usually sends a representative to the college championships every spring. Before the event, the rep could plan his/her field positioning per round to live tweet the most interesting matchups. That could be determined by the rep him/herself, or the rep could conduct a poll on Twitter before the event to see which game(s) ultimate fans want Bama Secs to live tweet. Once this information is in hand, the Bama Secs rep would use the interactive field map to slide between the rounds on any particular day and determine which fields to attend per round.
+For example, the blog Bama Secs usually sends a representative to the college championships every spring. Before the event, the rep could plan his/her field positioning per round to live tweet the most interesting matchups. That could be determined by the rep himself/herself, or the rep could conduct a poll on Twitter before the event to see which game(s) ultimate fans want Bama Secs to live tweet. Once this information is in hand, the Bama Secs rep would use the interactive field map to slide between the rounds on any particular day and determine which fields to attend per round.
 
 
 **3. Data source**
 
 Anticipated Data Source: [USA Ultimate Men](http://play.usaultimate.org/events/2017-USA-Ultimate-College-Championships/schedule/Men/College-Men/), [USA Ultimate Women](http://play.usaultimate.org/events/2017-USA-Ultimate-College-Championships/schedule/Women/College-Women/)
+
+Sample CSV: [USA Ultimate Men - Friday Pool Play](https://docs.google.com/spreadsheets/d/13eMw1HnEBgsYFIQH6vaouxBvTBTL50piuAayoiMf2pg/edit?usp=sharing)
