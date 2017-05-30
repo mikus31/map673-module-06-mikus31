@@ -10,7 +10,7 @@ The purpose of the map is to improve upon the static maps created by Bama Secs b
 
 It also provides a visual affordance for fans of ultimate to see where their favorite teams and/or players are participating in a game during any particular round on any day of a championship event. This affordance would allow fans to position themselves accordingly between fields with matchups of interest.
 
-In addition to pre-tournament planning, the map could be configured after the event to show round-by-round results by way of final scores. This would bring fans, tournament organizers, and media back to the interactive map after a tournament to use the map for results, analysis, recap, research, etc.
+In addition to pre-tournament planning, the map could be configured to show round-by-round results by way of final scores. This would bring fans, tournament organizers, and media back to the interactive map before, during, and after a tournament to use the map for results, analysis, recap, research, etc.
 
 For example, the blog Bama Secs usually sends a representative to the college championships every spring. Before the event, the rep could plan his/her field positioning per round to live tweet the most interesting matchups. That could be determined by the rep him/herself, or the rep could conduct a poll on Twitter before the event to see which game(s) ultimate fans want Bama Secs to live tweet. Once this information is in hand, the Bama Secs rep would use the interactive field map to slide between the rounds on any particular day and determine which fields to attend per round.
 
