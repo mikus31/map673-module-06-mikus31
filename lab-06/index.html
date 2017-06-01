@@ -15,46 +15,46 @@
             padding: 0;
             margin: 0;
         }
-        
+
         #title {
             position: absolute;
             right: 25px;
             top: 20px;
             background-color: whitesmoke;
             z-index: 650;
-            padding: 5px 10px;
-            border-radius: 10px;
+            padding: 6px 8px;
+            border-radius: 3px;
             margin: 0;
         }
-        
+
         h1 {
             font-family: 'Slabo 27px', serif;
-            font-size: 35px;
+            font-size: 1.7em;
         }
-        
+
         h2 {
             font-family: 'Slabo 27px', serif;
             font-size: 20px;
         }
-        
+
         #textbox {
             /*            css rules go here*/
             position: absolute;
-            right: 75px;
-            top: 400px;
+            right: 20px;
+            bottom: 20px;
             background-color: whitesmoke;
             z-index: 650;
             padding: 5px 10px;
             border-radius: 10px;
             margin: 0;
         }
-        
+
         p {
             font-family: 'Slabo 27px', serif;
             font-size: 15px;
             width: 300px;
         }
-        
+
         .cartodb-legend {
             position: absolute;
             left: 25px;
@@ -117,7 +117,7 @@
           }
                 , {
                     sql: "SELECT ST_Transform(the_geom, 2163) AS the_geom_webmercator, cartodb_id, bdpercent FROM uscounty_education" // reprojects and displays on map
-                        
+
                     , cartocss: $("#counties-styles").text() // style for counties that lives above this block of script
         }
     ]
